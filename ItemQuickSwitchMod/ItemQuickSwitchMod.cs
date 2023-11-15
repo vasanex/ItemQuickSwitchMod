@@ -19,8 +19,7 @@ namespace ItemQuickSwitchMod
 
         private void Awake()
         {
-            // Create Binds
-            // i dont know if this sections is needed tbh, keypresses are hijacked anyways...
+            // Creating configurable bindings:
             Debug.Log("creating Binds!");
             foreach (var action in CustomAction.AllActions)
             {
@@ -161,9 +160,13 @@ namespace ItemQuickSwitchMod
                     } while (distance != 0);
                 }
             }
-
+            ShipBuildModeManager.Instance.CancelBuildMode();
+            __instance.playerBodyAnimator.SetBool("GrabValidated", false);
             var switchItemParams = new object[] { requestedSlot, __instance.ItemSlots[requestedSlot] };
             GetPrivateMethod("SwitchToItemSlot").Invoke(__instance, switchItemParams);
+            if (__instance.currentlyHeldObjectServer != null)
+                __instance.currentlyHeldObjectServer.gameObject.GetComponent<AudioSource>().PlayOneShot(__instance.currentlyHeldObjectServer.itemProperties.grabSFX, 0.6f);
+            GetPrivateField("timeSinceSwitchingSlots").SetValue(__instance,0.0f);
         }
 
         private static bool isItemSwitchPossible(PlayerControllerB __instance)
