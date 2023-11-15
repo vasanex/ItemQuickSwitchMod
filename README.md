@@ -4,6 +4,11 @@ Simple Hotbar/Item quick switch mod for Lethal Company.
 ## Installation
 Your game needs to be modded with the latest version of [BepInEx 5](https://github.com/BepInEx/BepInEx).
 
+### Thunderstore users:
+Install the package using the Thunderstore App.
+
+### Manual install:
+
 Download the latest [release](https://github.com/vasanex/ItemQuickSwitchMod/releases) and put `ItemQuickSwitchMod.dll` 
 into your `BepInEx\plugins` folder.
 
