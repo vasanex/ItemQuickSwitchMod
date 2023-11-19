@@ -94,20 +94,17 @@ namespace ItemQuickSwitchMod
             if (keyDown == CustomAction.Emote1)
             {
                 PerformEmote(__instance, 1);
-                Debug.Log("You should be dancing now!");
                 return;
             }
 
             if (keyDown == CustomAction.Emote2)
             {
                 PerformEmote(__instance, 2);
-                Debug.Log("You should be pointing now!");
                 return;
             }
 
             stopEmotes(__instance);
             switchItemSlots(__instance, keyDown.SlotNumber);
-            Debug.Log($"You should be holding item {keyDown.SlotNumber + 1} now!");
         }
 
         private static void PerformEmote(PlayerControllerB __instance, int emoteId)
