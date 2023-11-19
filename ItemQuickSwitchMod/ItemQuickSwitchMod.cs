@@ -121,6 +121,9 @@ namespace ItemQuickSwitchMod
             {
                 return;
             }
+            
+            ShipBuildModeManager.Instance.CancelBuildMode();
+            __instance.playerBodyAnimator.SetBool("GrabValidated", false);
 
             // this whole upcoming section is more complicated than it need to be but whatever
             var distance = __instance.currentItemSlot - requestedSlot;
@@ -157,8 +160,6 @@ namespace ItemQuickSwitchMod
                     } while (distance != 0);
                 }
             }
-            ShipBuildModeManager.Instance.CancelBuildMode();
-            __instance.playerBodyAnimator.SetBool("GrabValidated", false);
             var switchItemParams = new object[] { requestedSlot, __instance.ItemSlots[requestedSlot] };
             GetPrivateMethod("SwitchToItemSlot").Invoke(__instance, switchItemParams);
             if (__instance.currentlyHeldObjectServer != null)
