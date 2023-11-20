@@ -1,6 +1,6 @@
 {
     "name": "ItemQuickSwitch",
-    "version_number": "1.0.2",
+    "version_number": "1.0.3",
     "website_url": "https://github.com/vasanex/ItemQuickSwitchMod",
     "description": "Use keybinds to access your items directly!",
     "dependencies": []
