@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ItemQuickSwitchMod
 {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(StaticPluginInfo.GUID, StaticPluginInfo.NAME, PluginInfo.PLUGIN_VERSION)]
     public class ItemQuickSwitchMod : BaseUnityPlugin
     {
         private Harmony _harmony;
@@ -19,9 +19,9 @@ namespace ItemQuickSwitchMod
                 Instance = this;
             }
 
-            mls = BepInEx.Logging.Logger.CreateLogSource(PluginInfo.PLUGIN_GUID);
+            mls = BepInEx.Logging.Logger.CreateLogSource(PluginInfo.PLUGIN_VERSION);
             // Creating configurable bindings:
-            mls.LogInfo($"{PluginInfo.PLUGIN_NAME} is creating binds!");
+            mls.LogInfo($"{StaticPluginInfo.NAME} is creating binds!");
             foreach (var action in CustomAction.AllActions)
             {
                 var bind = Config.Bind(
@@ -33,9 +33,9 @@ namespace ItemQuickSwitchMod
                 action.ConfigEntry = bind;
             }
 
-            _harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+            _harmony = new Harmony(StaticPluginInfo.GUID);
             _harmony.PatchAll();
-            mls.LogInfo($"Plugin {PluginInfo.PLUGIN_NAME} is loaded!");
+            mls.LogInfo($"Plugin {StaticPluginInfo.NAME} is loaded!");
         }
     }
 }
