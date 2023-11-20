@@ -11,49 +11,42 @@
 
 
     <ItemGroup>
-        <Reference Include="Assembly-CSharp">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <Reference Include="0Harmony">
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\BepInEx\core\0Harmony.dll</HintPath>
         </Reference>
-        <Reference Include="Unity.Netcode.Runtime">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.Netcode.Runtime.dll</HintPath>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx">
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\BepInEx\core\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="Facepunch Transport for Netcode for GameObjects">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Facepunch Transport for Netcode for GameObjects.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Facepunch Transport for Netcode for GameObjects.dll</HintPath>
         </Reference>
         <Reference Include="Facepunch.Steamworks.Win64">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
         </Reference>
         <Reference Include="Unity.InputSystem">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.InputSystem.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.InputSystem.dll</HintPath>
         </Reference>
-        <Reference Include="Unity.TextMeshPro">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+        <Reference Include="Unity.Netcode.Runtime">
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.Netcode.Runtime.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine">
-          <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AnimationModule">
-          <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AudioModule">
-          <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
-        <Reference Include="UnityEngine.InputLegacyModule">
-          <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+        <Reference Include="UnityEngine.InputModule">
+          <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.InputModule.dll</HintPath>
         </Reference>
-        <Reference Include="UnityEngine.UI">
-            <HintPath>J:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.UI.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all"/>
-        <PackageReference Include="BepInEx.Core" Version="5.*"/>
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*"/>
-<!--        <PackageReference Include="UnityEngine.Modules" Version="5.6.0" IncludeAssets="compile"/>-->
     </ItemGroup>
 
 <!--    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">-->
