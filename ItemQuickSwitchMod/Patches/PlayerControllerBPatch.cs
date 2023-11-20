@@ -19,9 +19,6 @@ internal class PlayerControllerBPatch
     private static readonly object[] BackwardsParam = new object[1] { false };
     private static readonly object[] ForwardsParam = new object[1] { true };
 
-    private ManualLogSource mls;
-    private static PlayerControllerBPatch instance;
-
     private static object InvokePrivateMethod(PlayerControllerB instance, string methodName, object[] parameters = null)
     {
         MethodCache.TryGetValue(methodName, out var method);
@@ -44,11 +41,6 @@ internal class PlayerControllerBPatch
     [HarmonyPostfix]
     public static void PlayerControllerB_Update(PlayerControllerB __instance)
     {
-        if (instance == null)
-        {
-            instance = new PlayerControllerBPatch(); // Create an instance
-        }
-        instance.mls = ItemQuickSwitchMod.Instance.mls;
 
         if ((!__instance.IsOwner || !__instance.isPlayerControlled ||
             __instance.IsServer && !__instance.isHostPlayerObject) && !__instance.isTestingPlayer) return;
@@ -62,16 +54,13 @@ internal class PlayerControllerBPatch
         {
             case "Emote1":
                 PerformEmote(__instance, 1);
-                instance.mls.LogInfo("Player is dancing now.");
                 break;
             case "Emote2":
                 PerformEmote(__instance, 2);
-                instance.mls.LogInfo("Player is pointing now");
                 break;
             default:
                 StopEmotes(__instance);
                 SwitchItemSlots(__instance, keyDown.SlotNumber);
-                instance.mls.LogInfo($"Player is holding slot number {keyDown.SlotNumber + 1}");
                 break;
         }
     }
